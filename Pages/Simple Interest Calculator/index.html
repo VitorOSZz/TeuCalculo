@@ -21,6 +21,8 @@
     <link rel="preload" href="../../Assets/Styles/../../Assets/Styles/styleCalculators.css" as="style" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="Assets/Styles/styles.css"></noscript>
 
+    <script src="../../Assets/Scripts/scriptSimpleInterest.js"></script>
+
     <head>
         <link rel="alternate" href="lang/en/index.html" hreflang="en">
     </head>
@@ -38,6 +40,44 @@
     </header>
     <main>
 
+        <h2>Calculadora Juros Simples</h1>
+
+        <div class="Calculator">
+
+            <form>
+                <div class="container">
+                    <label for="InitialValue">Valor Inicial</label> <br>
+                    <input type="number" name="Initial Value" id="InitialValue"> <br>
+                </div>
+
+                <div class="container">
+                    <label for="InterestRate">Taxa de juros</label>
+                    <label for="InterestTime">
+                        <select name="InterestTime" id="InterestTime">
+                            <option value="InterestYearly">Anual</option>
+                            <option value="InterestMonth">Mensal</option>
+                        </select>
+                    </label>
+                    <input type="number" name="Interest Rate" id="InterestRate"> <br>
+                </div>
+
+                <div class="container">
+                    <label for="Time">Período</label>
+                    <label for="TypeOfTime">
+                        <select name="Type Of Time" id="TypeOfTime">
+                            <option value="TimeYearly">Anual</option>
+                            <option value="TimeMonth">Mensal</option>
+                        </select>
+                    </label>
+                    <input type="number" name="Time" id="Time">
+                </div>
+            </form>
+
+            <div>
+                <button onclick="SimpleInterest(InitialValue.value,InterestRate.value,Time.value,InterestTime.value,TypeOfTime.value)" class="button-Calcute">Calcular</button>
+            </div>
+
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 Vitor Zorzan Todos os direitos reservados.</p>
