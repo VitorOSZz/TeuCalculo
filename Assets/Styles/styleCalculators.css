@@ -11,6 +11,7 @@
 }
 
 body {
+    height: 100vh;
     margin: 0px;
 }
 
@@ -21,14 +22,23 @@ header {
     padding: 5px;
     background-color: var(--SecondaryBackground);
 }
+
+header > h1 > a {
+    color: black;
+    text-decoration: none;
+}
+
 header > nav {
-    margin-bottom: 8px;
+    margin: 8px;
     font-size: 22px;
     font-weight: 600;
     text-align: center;
 }
 
+
 header > nav > a {
+    display: inline-block;
+    margin-bottom: 5px;
     border-radius: 5px;
     padding: 5px;
     text-decoration: none;
@@ -40,12 +50,27 @@ header > nav > a:hover {
 }
 
 
-main {
-    background-color: blue;
+/*main {}*/
+
+main h2 {
+    font-size: 22px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: "PT Sans", serif;
+}
+
+main div {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 footer {
-    background-color: rgba(0, 0, 0, 0.57);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 17px;
+    color: black;
+    background-color: rgba(5, 4, 4, 0.733);
 }
 
 a {
@@ -56,4 +81,45 @@ a {
 #Here {
     color: #2c5c92;
     background-color: var(--TertiaryBackGround);
+}
+
+.Calculator {
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    display: inline-block;
+    margin: 0px;
+    font-size: 20px;
+    background-color: var(--PrimaryBackground);
+}
+
+.Calculator > div {
+    margin: 15px;
+    text-align: center;
+}
+
+.Highlight {
+    border-radius: 4px;
+    background-color: var(--SecondaryBackground);
+    padding: 3px 25px;
+    margin: 5px;
+}
+
+#ResultOfTotal {
+    text-align: center;
+    background-color: var(--PrimaryBackground);
+    border-radius: 4px;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+}
+
+.input-width {
+    width: 120px;
+}
+
+.button-Calcute {
+    background-color: var(--PrimaryBackground);
+    margin-left: 10px;
+    border-radius: 4px;
 }
