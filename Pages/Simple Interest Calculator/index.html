@@ -38,6 +38,7 @@
             <a href="../CompoundInterestCalculator/index.html">Calculadora Juros Compostos</a>
         </nav>
     </header>
+    </style>
     <main>
 
         <h2>Calculadora Juros Simples</h1>
@@ -46,37 +47,38 @@
 
             <form>
                 <div class="container">
-                    <label for="InitialValue">Valor Inicial</label> <br>
-                    <input type="number" name="Initial Value" id="InitialValue"> <br>
+                    <label for="InitialValue">Valor Inicial</label>
+                    <input type="number" name="Initial Value" id="InitialValue">
                 </div>
 
                 <div class="container">
                     <label for="InterestRate">Taxa de juros</label>
                     <label for="InterestTime">
+                        <input type="number" name="Interest Rate" id="InterestRate">
                         <select name="InterestTime" id="InterestTime">
-                            <option value="InterestYearly">Anual</option>
+                        <option value="InterestYearly">Anual</option>
                             <option value="InterestMonth">Mensal</option>
                         </select>
                     </label>
-                    <input type="number" name="Interest Rate" id="InterestRate"> <br>
                 </div>
 
                 <div class="container">
                     <label for="Time">Período</label>
                     <label for="TypeOfTime">
+                        <input type="number" name="Time" id="Time">
                         <select name="Type Of Time" id="TypeOfTime">
                             <option value="TimeYearly">Anual</option>
                             <option value="TimeMonth">Mensal</option>
                         </select>
                     </label>
-                    <input type="number" name="Time" id="Time">
                 </div>
             </form>
+            <button onclick="SimpleInterest(InitialValue.value,InterestRate.value,Time.value,InterestTime.value,TypeOfTime.value)" class="button-Calcute">Calcular</button>
+        </div>
 
-            <div>
-                <button onclick="SimpleInterest(InitialValue.value,InterestRate.value,Time.value,InterestTime.value,TypeOfTime.value)" class="button-Calcute">Calcular</button>
-            </div>
-
+        <div>
+            <div id="Result"></div>
+            
         </div>
     </main>
     <footer>

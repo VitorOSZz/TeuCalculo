@@ -49,10 +49,6 @@ header > nav > a:hover {
     transition: all 0.5s ease;
     background-color: var(--TertiaryBackGround);
 }
-
-
-/*main {}*/
-
 main h2 {
     font-size: 22px;
     margin-top: 20px;
@@ -65,6 +61,7 @@ main div {
 }
 
 footer {
+    display: none;
     font-size: 17px;
     color: black;
     background-color: rgb(88, 88, 88);
@@ -84,27 +81,24 @@ a {
     border-radius: 5px;
     padding: 10px 10px 50px 10px;
     display: block;
-    position: relative;
-    right: 50%;
-    left: 50%;
-    transform: translate(-50%, 0);
     font-size: 20px;
     background-color: var(--PrimaryBackground);
     width: 300px;
     height: 200px;
     margin-bottom: 10px;
     text-align: center;
+    margin: auto;
 }
 
 .Calculator form {
-    margin: 15px 30px 0px 0px;
-}
-.Calculator label {
-    display: inline-block;
+    margin: auto;
 }
 .Calculator input {
     width: 100px;
     height: 100%;
+}
+.Calculator label {
+    display: block;
 }
 .Highlight {
     width: 10%;
@@ -123,5 +117,34 @@ a {
 .container {
     border: black 1px solid;
     border-radius: 5px;
-    margin: 20px 20px 0px 0px;
+    margin: 15px auto;
+}
+#Result {
+    display: block;
+    text-align: center;
+    margin: auto;
+    overflow: auto;
+}
+#Result table {
+    background-color: lightgray;
+    margin: 30px auto 0px auto;
+    border-collapse: collapse;
+    width: 50%;
+}
+#Result td {
+    padding: 10px;
+}
+#Result tr:nth-child(2n) {
+    background-color: rgb(172, 172, 172);
+}
+#Result tr:hover {
+    background-color: white;
+}
+#Result th {
+    background-color: gray;
+    padding: 10px 0px;
+}
+.button-Calcute {
+    display: block;
+    margin: auto;
 }
