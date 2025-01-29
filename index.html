@@ -4,26 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Site de <p>Calculadoras</p>">
-    <meta name="keywords" content="Calculadora, Calculadora de Juros Compostos, Calculadora de Gravidez">
+    <meta name="description" content="Site de calculadoras para facilitar sua vida. Calcule juros compostos, porcentagens e muito mais.">
     <meta name="author" content="Vitor Zorzan">
-
     <meta property="og:title" content="TeuCálculo">
     <meta property="og:description" content="Seu site de calculadora para tudo.">
     <meta property="og:image" content="Assets/images/social-preview.jpg">
     <meta property="og:url" content="http://teucalculo.com.br">
     <meta name="twitter:card" content="Assets/images/twitercard.webp">
-
+    <!-- Favicons -->
     <link rel="icon" href="Assets/images/favicon32.ico" sizes="32x32">
     <link rel="icon" href="Assets/images/favicon48.ico" sizes="48x48">
     <link rel="icon" href="Assets/images/favicon96.ico" sizes="96x96">
-    
+    <!-- Link:css -->
     <link rel="preload" href="Assets/Styles/styles.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="Assets/Styles/styles.css"></noscript>
+    <link rel="stylesheet" href="Assets/Styles/styles.css">
+    <!-- Languages -->
+    <link rel="alternate" href="lang/en/index.html" hreflang="en">
 
-    <head>
-        <link rel="alternate" href="lang/en/index.html" hreflang="en">
-    </head>
 
     <title>TeuCálculo</title>
 </head>
@@ -31,19 +28,50 @@
     <header>
         <h1><a href="index.html">Teu Cálculo</a></h1>
         <nav>
-            <a href="Pages/PercentageCalculator/index.html">Calculadora Porcentagem</a>
-            <a href="Pages/Simple Interest Calculator/index.html">Calculadora Juros Simples</a>
-            <a href="Pages/CompoundInterestCalculator/index.html">Calculadora Juros Compostos</a>
+            <ul>
+                <li><a href="Pages/PercentageCalculator/index.html" aria-label="Ir para Calculadora de Porcentagem">Calculadora Porcentagem</a></li>
+                <li><a href="Pages/SimpleInterestCalculator/index.html" aria-label="Ir para Calculadora de Juros Simples">Calculadora Juros Simples</a></li>
+                <li><a href="Pages/CompoundInterestCalculator/index.html" aria-label="Ir para Calculadora de Juros">Calculadora Juros Compostos</a></li>
+            </ul>
         </nav>
     </header>
     <main>
+        <div>
+            <h3>Esse site tem o objetivo em ajudar nos cálculos de forma fácil!</h3>
 
+            <p>Temos calculadoras de:</p>
+        </div>
+
+        <div id="All-Calculators">
+
+            <p>Calculadoras Financeiras</p>
+            <div class="Blocks"> <!-- Calculadoras Financeiras -->
+                <div class="Calculator-Block">Calculadora Juros Simples</div>
+                <div class="Calculator-Block">Calculadora Porcentagem</div>
+                <div class="Calculator-Block">Calculadora Juros Compostos</div>
+                <div class="Calculator-Block">Calculadora Aposentadoria</div>
+                <div class="Calculator-Block">Calculadora Aluguel x Financiamento</div>
+                <div class="Calculator-Block">Calculadora Reserva de emergência</div>
+                <div class="Calculator-Block">Calculadora Poupança x Selic</div>
+                <div class="Calculator-Block">Calculadora Renda Fixa</div>
+                <div class="Calculator-Block">Calculadora Regra de três</div>
+            </div>
+
+            <p>Calculadoras Trabalhistas</p>
+            <div class="Blocks"> <!-- Calculadoras Trabalhistas -->
+                <div class="Calculator-Block">Calculadora Salário Líquido</div><!--
+                <div class="Calculator-Block">Calculadora Férias</div>
+                <div class="Calculator-Block">Calculadora Rescisão</div>!-->
+                <div class="Calculator-Block">Calculadora Imposto de Renda</div>
+            </div>
+        </div>
     </main>
     <footer>
-        <p>&copy; 2025 Vitor Zorzan Todos os direitos reservados.</p>
-        <p>Este projeto é licenciado sob a <a href="https://opensource.org/licenses/MIT" target="_blank" class="link"> Licença MIT</a>.</p>
+        <p>&copy; <span id="year"></span> Vitor Zorzan Todos os direitos reservados. <br>
+        Este projeto é licenciado sob a <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">Licença MIT</a>.</p>
     </footer>
     
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
 
