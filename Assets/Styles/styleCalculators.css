@@ -110,26 +110,30 @@ a {
     display: block;
     text-align: center;
     margin: auto;
+    background-color: rgba(235, 235, 235, 0.753);
+    width: 60%;
+}
+#Result div#table-scrolling {
     overflow: auto;
+    height: 500px;
+    width: 80%;
+    margin: auto;
 }
 #Result table {
-    background-color: lightgray;
-    margin: 30px auto 0px auto;
+    background-color: rgb(255, 255, 255); 
     border-collapse: collapse;
-    width: 50%;
+    height: 100%;
+    width: 100%;
 }
 #Result td {
     padding: 10px 15px;
 }
-#Result tr:nth-child(2n) {
-    background-color: rgb(172, 172, 172);
-}
-#Result tr:hover {
-    background-color: white;
-}
 #Result th {
     background-color: gray;
     padding: 10px 0px;
+}
+#Result tr {
+    border-bottom: 1px rgb(233, 233, 233) solid;
 }
 .button-Calcute {
     display: block;
