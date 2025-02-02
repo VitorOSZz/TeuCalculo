@@ -10,10 +10,16 @@
     --LinkText: #336aa9;
 }
 
+* {
+    font-family: "PT Sans", serif ;
+}
+
 body {
     margin: 0px;
 }
-
+main {
+    margin: 0px 5px;
+}
 header {
     font-family: "PT Sans", serif;
     font-size: 25px;
@@ -61,21 +67,43 @@ a {
 li {
     display: inline-block;
     list-style-type: none;
-    margin: 5px;
-}
-.Blocks {
-    text-align: center;
-}
-.Calculator-Block {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.787);
-    border-radius: 5px;
-    width: 150px;
-    height: 150px;
-    margin: 5px;
 }
 #All-Calculators {
     background-color: rgba(0, 0, 0, 0.244);
-    max-width: 70vw;
+    max-width: 75%;
     margin: auto;
+    padding: 5px 5px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 7px 2px #000000ab;
+}
+.Blocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 150px));
+    justify-content: center;
+    gap: 7px;
+    margin: 15px;
+    min-height: 150px;
+}
+.Calculator-Block {
+    background-color: rgba(41, 41, 41, 0.823);
+    padding-bottom: 5px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 5px 0px #000000ab;
+    transition: transform 0.2s, background-color 0.3s;
+    height: 150px;
+}
+.Calculator-Block:hover {
+    transform: scale(1.05);
+    background-color: rgba(41, 41, 41, 0.939);
+}
+#All-Calculators a {
+    text-decoration: none;
+    color: black;
+}
+.Calculator-Block img {
+    margin-top: 17px;
+    width: 80%;
+    height: 80px;
+    border-radius: 3px;
 }
