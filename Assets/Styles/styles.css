@@ -3,11 +3,12 @@
 
 /* Variables */
 :root {
-    --PrimaryBackground: #f2f2f2;
-    --SecondaryBackground: #b2b2b2;
-    --TertiaryBackGround: #808080;
-    --PrimaryText: #212121;
-    --LinkText: #336aa9;
+    --PrimaryBackground: #213b64;
+    --SecondaryBackground: #41729f;
+    --TertiaryBackGround: #5885af;
+    --PrimaryText: #333333;
+    --LinkText: #c3e0e5;
+    --TitlesText: #111e33;
 }
 
 * {
@@ -25,7 +26,8 @@ header {
     font-size: 25px;
     color: var(--PrimaryText);
     padding: 5px;
-    background-color: var(--SecondaryBackground);
+    background: rgb(17,30,51);
+    background: linear-gradient(180deg, rgb(31, 55, 94) 0%, rgba(39,68,114,1) 100%);
 }
 header h1 {
     margin-left: 30px;
@@ -36,9 +38,6 @@ header > h1 a {
     transition: background-color 0.5s ease;
     padding: 15px;
     border-radius: 4px;
-}
-header > h1 a:hover {
-    background-color: var(--TertiaryBackGround);
 }
 header > nav {
     margin-bottom: 8px;
@@ -85,17 +84,18 @@ li {
     min-height: 150px;
 }
 .Calculator-Block {
-    background-color: rgba(41, 41, 41, 0.823);
+    background-color: var(--PrimaryBackground);
     padding-bottom: 5px;
     border-radius: 5px;
     text-align: center;
+    color: black;
     box-shadow: 2px 2px 5px 0px #000000ab;
     transition: transform 0.2s, background-color 0.3s;
     height: 150px;
 }
 .Calculator-Block:hover {
     transform: scale(1.05);
-    background-color: rgba(41, 41, 41, 0.939);
+    background-color: #1c3153;
 }
 #All-Calculators a {
     text-decoration: none;
