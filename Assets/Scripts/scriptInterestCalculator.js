@@ -3,6 +3,7 @@ function InterestCalculate(InitialValue,InterestRate,Time,InterestTime,TypeOfTim
     InterestRate = InterestRate/100
     
     div = document.querySelector("#Result")
+    div.style.display = "block";
     if (InitialValue == '' || InterestRate == '' || Time == '') {
         console.log('Say a number')
         return div.innerHTML = '<p>Por favor, preencha todos os campos</p>'

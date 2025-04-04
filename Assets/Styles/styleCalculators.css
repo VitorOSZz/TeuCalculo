@@ -3,11 +3,17 @@
 
 /* Variables */
 :root {
-    --PrimaryBackground: #403c64c4;
-    --SecondaryBackground: #b2b2b2;
-    --TertiaryBackGround: #989898;
-    --PrimaryText: #212121;
-    --LinkText: #336aa9;
+    --color-heading: #F9FAFB;
+    --color-primary: #847dbb;
+    --color-secondary: #A5B4FC;
+    --color-tertiary: #F472B6;
+    --color-background: #F9FAFB;
+    --color-text-primary: #111827;
+    --color-text-secondary: #6B7280;
+    --color-success: #10B981;
+    --color-error: #EF4444;
+    --color-warning: #F59E0B;
+    --color-link: #4F46E5;
 }
 
 body {
@@ -16,11 +22,11 @@ body {
 }
 
 header {
-    font-family: "PT Sans", serif;
     font-size: 25px;
-    color: var(--PrimaryText);
-    padding: 5px;
-    background-color: var(--SecondaryBackground);
+    color: var(--color-text-primary);
+    padding: 25px;
+    margin-bottom: 20px;
+    background: linear-gradient(180deg, rgb(31, 55, 94) 0%, rgba(39, 68, 114, 1) 100%);
 }
 header > h1 > a {
     color: black;
@@ -34,6 +40,7 @@ header > nav {
 }
 header > nav > a {
     display: inline-block;
+    color: var(--color-heading);
     margin-bottom: 5px;
     border-radius: 5px;
     padding: 5px;
@@ -41,7 +48,7 @@ header > nav > a {
 }
 header > nav > a:hover {
     transition: all 0.5s ease;
-    background-color: var(--TertiaryBackGround);
+    background-color: var(--color-primary);
 }
 
 main h2 {
@@ -59,13 +66,13 @@ footer {
 }
 
 a {
-    color: var(--LinkText);
+    color: var(--color-link);
 }
 
 
 #Here {
-    color: #2c5c92;
-    background-color: var(--TertiaryBackGround);
+    color: #121a15;
+    background-color: #1f304b;
 }
 
 .Calculator {
@@ -73,7 +80,7 @@ a {
     border-radius: 10px;
     display: block;
     font-size: 20px;
-    background-color: var(--PrimaryBackground);
+    background-color: var(--color-primary);
     width: 300px;
     min-height: 180px;
     text-align: center;
@@ -82,6 +89,15 @@ a {
 .Calculator label {
     display: block;
 }
+.Calculator button {
+    margin: auto auto 15px auto;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(65, 65, 109);
+    color: white;
+    font-size: 1.1rem;
+}
 .Highlight {
     width: 10%;
     height: 100%;    
@@ -89,7 +105,7 @@ a {
 
 #ResultOfTotal {
     text-align: center;
-    background-color: var(--PrimaryBackground);
+    background-color: var(--color-primary);
     border-radius: 4px;
     display: inline-block;
     padding: 10px;
@@ -99,19 +115,44 @@ a {
 .container {
     border: black 1px solid;
     border-radius: 5px;
-    margin: 25px auto;
+    margin: 20px auto;
     padding-top: 5px;
 }
-.container input {
+.container div{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
     margin-bottom: 10px;
+    height: 35px;
+}
+.container input {
+    padding: 0px;
+    border-left: 0px;
+    border-top: 2px gray solid;
+    border-bottom: 2px gray solid;
+    font-size: 1rem;
+}
+.container span, .container select {
+    background-color: rgb(168, 167, 167);
+    padding: 2px 2px;
+    min-width: 27px;
+    border: 2px gray solid;
+}
+.container select {
+    width: 3.7rem;
+    margin: 0px;
 }
 
 #Result {
-    display: block;
+    display: none;
     text-align: center;
     margin: auto;
     background-color: rgba(235, 235, 235, 0.753);
     width: 60%;
+    margin-bottom: 100px;
+    box-shadow: 2px 2px 7px 0px black;
+    border-radius: 5px;
+    padding: 20px;
 }
 #Result div#table-scrolling {
     overflow: auto;
@@ -134,8 +175,4 @@ a {
 }
 #Result tr {
     border-bottom: 1px rgb(233, 233, 233) solid;
-}
-.button-Calcute {
-    display: block;
-    margin: auto auto 10px auto;
 }

@@ -3,107 +3,179 @@
 
 /* Variables */
 :root {
-    --PrimaryBackground: #f2f2f2;
-    --SecondaryBackground: #b2b2b2;
-    --TertiaryBackGround: #808080;
-    --PrimaryText: #212121;
-    --LinkText: #336aa9;
+<<<<<<< Updated upstream
+    --PrimaryBackground: #213b64;
+    --SecondaryBackground: #41729f;
+    --TertiaryBackGround: #5885af;
+    --PrimaryText: #333333;
+    --LinkText: #c3e0e5;
+    --TitlesText: #111e33;
+=======
+    --color-heading: #F9FAFB;
+    --color-primary: #4F46E5;
+    --color-secondary: #A5B4FC;
+    --color-tertiary: #363c58;
+    --color-background: #F9FAFB;
+    --color-text-primary: #111827;
+    --color-text-secondary: #6B7280;
+    --color-success: #10B981;
+    --color-error: #EF4444;
+    --color-warning: #F59E0B;
+    --color-link: #4F46E5;
+>>>>>>> Stashed changes
 }
 
+/* Reset & Base */
 * {
-    font-family: "PT Sans", serif ;
+    font-family: "PT Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0px;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
 }
+
 main {
-    margin: 0px 5px;
+    margin: 0 5px;
 }
+
+/* Header */
 header {
-    font-family: "PT Sans", serif;
     font-size: 25px;
+<<<<<<< Updated upstream
     color: var(--PrimaryText);
     padding: 5px;
-    background-color: var(--SecondaryBackground);
+    background: rgb(17,30,51);
+    background: linear-gradient(180deg, rgb(31, 55, 94) 0%, rgba(39,68,114,1) 100%);
+=======
+    color: var(--color-text-primary);
+    padding: 25px;
+    margin-bottom: 20px;
+    background: linear-gradient(180deg, rgb(31, 55, 94) 0%, rgba(39, 68, 114, 1) 100%);
+>>>>>>> Stashed changes
 }
+
 header h1 {
     margin-left: 30px;
 }
-header > h1 a {
+
+header h1 a {
     color: black;
     text-decoration: none;
     transition: background-color 0.5s ease;
     padding: 15px;
     border-radius: 4px;
 }
-header > h1 a:hover {
-    background-color: var(--TertiaryBackGround);
-}
+<<<<<<< Updated upstream
 header > nav {
+=======
+
+header nav {
+>>>>>>> Stashed changes
     margin-bottom: 8px;
     font-size: 22px;
     font-weight: 600;
     text-align: center;
 }
-header > nav a {
+
+header nav a {
     border-radius: 5px;
     padding: 5px;
     text-decoration: none;
-
+    color: var(--color-link);
     transition: background-color 0.5s ease;
 }
-header > nav a:hover {
-    background-color: var(--TertiaryBackGround);
+
+header nav a:hover {
+    background-color: var(--color-tertiary);
+    color: white;
 }
 
+/* Footer */
 footer {
     background-color: rgba(0, 0, 0, 0.57);
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
 
+/* Links */
 a {
-    color: var(--LinkText);
+    color: var(--color-link);
+    text-decoration: none;
 }
+
+/* List */
 li {
     display: inline-block;
     list-style-type: none;
 }
+
+/* Calculadora */
 #All-Calculators {
-    background-color: rgba(0, 0, 0, 0.244);
-    max-width: 75%;
-    margin: auto;
-    padding: 5px 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+    max-width: 900px;
+    margin: auto auto 50px auto;
+    padding: 10px;
     border-radius: 5px;
-    box-shadow: 2px 3px 7px 2px #000000ab;
+    box-shadow: 2px 3px 7px 2px black;
 }
+
 .Blocks {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(110px, 150px));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 150px));
     justify-content: center;
-    gap: 7px;
+    gap: 10px;
     margin: 15px;
     min-height: 150px;
 }
+
 .Calculator-Block {
-    background-color: rgba(41, 41, 41, 0.823);
+<<<<<<< Updated upstream
+    background-color: var(--PrimaryBackground);
+=======
+    background-color: var(--color-secondary);
+>>>>>>> Stashed changes
     padding-bottom: 5px;
     border-radius: 5px;
     text-align: center;
+    color: black;
+<<<<<<< Updated upstream
     box-shadow: 2px 2px 5px 0px #000000ab;
+=======
+    box-shadow: 2px 2px 5px 0px black;
+>>>>>>> Stashed changes
     transition: transform 0.2s, background-color 0.3s;
     height: 150px;
 }
+
 .Calculator-Block:hover {
     transform: scale(1.05);
-    background-color: rgba(41, 41, 41, 0.939);
+<<<<<<< Updated upstream
+    background-color: #1c3153;
 }
 #All-Calculators a {
     text-decoration: none;
     color: black;
+=======
+    background-color: var(--color-tertiary);
+>>>>>>> Stashed changes
 }
+
 .Calculator-Block img {
     margin-top: 17px;
     width: 80%;
     height: 80px;
     border-radius: 3px;
+}
+
+#site-presentation {
+    margin: 0px 0px 1.5rem 2rem;
+}
+#site-presentation h3 {
+    margin-top: 0.3rem;
 }

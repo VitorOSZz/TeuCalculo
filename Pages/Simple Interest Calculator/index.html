@@ -21,20 +21,16 @@
     <link rel="stylesheet" href="../../Assets/Styles/styles.css">
     <link rel="stylesheet" href="../../Assets/Styles/styleCalculators.css">
 
-    <script src="../../Assets/Scripts/scriptSimpleInterest.js"></script>
+    <script src="../../Assets/Scripts/scriptInterestCalculator.js"></script>
+    
 
     <link rel="alternate" href="lang/en/index.html" hreflang="en">
 
     <title>TeuCálculo</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <h1><a href="../../index.html">Teu Cálculo</a></h1>
-        <nav>
-            <a href="../PercentageCalculator/index.html">Calculadora Porcentagem</a>
-            <a href="index.html" id="Here">Calculadora Juros Simples</a>
-            <a href="../CompoundInterestCalculator/index.html">Calculadora Juros Compostos</a>
-        </nav>
     </header>
     <main>
 
@@ -45,28 +41,35 @@
             <form>
                 <div class="container">
                     <label for="InitialValue">Valor Inicial</label>
-                    <input type="number" name="Initial Value" id="InitialValue">
+                    <div>
+                        <span>R$ </span><input type="number" name="Initial Value" id="InitialValue">
+                    </div>
                 </div>
 
                 <div class="container">
                     <label for="InterestRate">Taxa de juros</label>
                     <label for="InterestTime">
-                        <input type="number" name="Interest Rate" id="InterestRate">
-                        <select name="InterestTime" id="InterestTime">
-                        <option value="InterestYearly">Anual</option>
-                            <option value="InterestMonth">Mensal</option>
-                        </select>
+                        <div>
+                            <span>% </span><input type="number" name="Interest Rate" id="InterestRate">
+                            <select name="InterestTime" id="InterestTime">
+                                <option value="InterestYearly">Anual</option>
+                                    <option value="InterestMonth">Mensal</option>
+                                </select>
+                        </div>
+                        
                     </label>
                 </div>
 
                 <div class="container">
                     <label for="Time">Período</label>
                     <label for="TypeOfTime">
-                        <input type="number" name="Time" id="Time">
-                        <select name="Type Of Time" id="TypeOfTime">
-                            <option value="TimeYearly">Anual</option>
-                            <option value="TimeMonth">Mensal</option>
-                        </select>
+                        <div>
+                            <input type="number" name="Time" id="Time">
+                            <select name="Type Of Time" id="TypeOfTime">
+                                <option value="TimeYearly">Anual</option>
+                                <option value="TimeMonth">Mensal</option>
+                            </select>
+                        </div>
                     </label>
                 </div>
             </form>
@@ -81,6 +84,8 @@
         <p>&copy; 2025 Vitor Zorzan Todos os direitos reservados.</p>
         <p>Este projeto é licenciado sob a <a href="https://opensource.org/licenses/MIT" target="_blank" class="link"> Licença MIT</a>.</p>
     </footer>
+
+    <script src="../../Assets/Scripts/header.js"></script>
     
 </body>
 </html>

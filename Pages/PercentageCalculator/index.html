@@ -20,7 +20,9 @@
     
     <link rel="stylesheet" href="../../Assets/Styles/styles.css">
     <link rel="stylesheet" href="../../Assets/Styles/styleCalculators.css">
+    
     <script src="../../Assets/Scripts/scriptPercentCalculator.js"></script>
+    <script src="../../Assets/Scripts/header.js"></script>
 
     <head>
         <link rel="alternate" href="lang/en/index.html" hreflang="en">
@@ -28,29 +30,41 @@
 
     <title>TeuCálculo</title>
 </head>
+
+<style>
+    .Calculators {
+        display: grid;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+        gap: 10px;
+    }
+</style>
+
 <body>
-    <header>
+    <header id="header">
         <h1><a href="../../index.html">Teu Cálculo</a></h1>
-        <nav>
-            <a href="index.html" id="Here">Calculadora Porcentagem</a>
-            <a href="../Simple Interest Calculator/index.html">Calculadora Juros Simples</a>
-            <a href="../CompoundInterestCalculator/index.html">Calculadora Juros Compostos</a>
-        </nav>
     </header>
     <main>
         <h2>Calculadora De Porcentagem</h2>
 
         <!-- Calculadora quanto é 10% de 100 -->
+<<<<<<< Updated upstream
         <div class="Calculator">
             <form>
                 <div class="container">
-                    <label for="HowMuchPercent">Quanto é</label>
-                    <input type="number" name="How Percent is?" id="HowMuchPercent"><span> %</span>
+                    <label for="HowMuchPercent">Quantos porcento</label>
+                    <div>
+                        <span>% </span><input type="number" name="How Percent is?" id="HowMuchPercent">
+                    </div>
+                    
                 </div>
                 
                 <div class="container">
-                    <label for="OfTotal">De</label>
-                    R$ <input type="number" name="Total" id="OfTotal">
+                    <label for="OfTotal">Do total de</label>
+                    <div>
+                        <span>R$ </span><input type="number" name="Total" id="OfTotal">
+                    </div>
+                    
                 </div>
             </form>
             <button onclick="CalculatePercentOfTotal(HowMuchPercent.value,OfTotal.value)">Calcular</button>
@@ -61,12 +75,17 @@
             <form>
                 <div class="container">
                     <label for="PartOfNumber">O valor</label>
-                    R$ <input type="number" name="PartOfNumber" id="PartOfNumber">
+                    <div>
+                        <span>R$ </span><input type="number" name="PartOfNumber" id="PartOfNumber">
+                    </div>
+                    
                 </div>
                 
                 <div class="container">
                     <label for="TotalNumber">É quantos por cento de</label>
-                    R$ <input type="number" name="TotalNumber" id="TotalNumber">
+                    <div>
+                        <span>R$ </span><input type="number" name="TotalNumber" id="TotalNumber">
+                    </div>
                 </div>
 
             </form>
@@ -78,17 +97,84 @@
             <form>
                 <div class="container">
                     <label for="Before">Antes era</label>
-                    R$ <input type="number" name="Before" id="Before"> 
+                    <div>
+                        <span>R$ </span><input type="number" name="Before" id="Before"> 
+                    </div>
                 </div>
 
                 <div class="container">
-                    <label for="After">Ficou</label> 
-                    R$ <input type="number" name="After" id="After">
+                    <label for="After">Depois ficou</label>
+                    <div><span>R$ </span><input type="number" name="After" id="After"></div>
                 </div>
             </form>
             <button onclick="DifferenceBeforeAfter(Before.value, After.value)">Calcular</button>
             <p id="ResultOfTotalThird"></p>
         </div>
+=======
+         <div class="Calculators">
+            <div class="Calculator">
+                <form>
+                    <div class="container">
+                        <label for="HowMuchPercent">Quantos porcento</label>
+                        <div>
+                            <span>% </span><input type="number" name="How Percent is?" id="HowMuchPercent">
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="container">
+                        <label for="OfTotal">Do total de</label>
+                        <div>
+                            <span>R$ </span><input type="number" name="Total" id="OfTotal">
+                        </div>
+                        
+                    </div>
+                </form>
+                <button onclick="CalculatePercentOfTotal(HowMuchPercent.value,OfTotal.value)">Calcular</button>
+                <p id="ResultOfTotalFirst"></p>
+            </div>
+            <!-- Calculadora quantos % é 10 de 100?-->
+            <div class="Calculator">
+                <form>
+                    <div class="container">
+                        <label for="PartOfNumber">O valor</label>
+                        <div>
+                            <span>R$ </span><input type="number" name="PartOfNumber" id="PartOfNumber">
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="container">
+                        <label for="TotalNumber">É quantos por cento de</label>
+                        <div>
+                            <span>R$ </span><input type="number" name="TotalNumber" id="TotalNumber">
+                        </div>
+                    </div>
+    
+                </form>
+                <button onclick="PercentOf(PartOfNumber.value, TotalNumber.value)">Calcular</button>
+                <p id="ResultOfTotalSecond"></p>
+            </div>
+            <!--Calculadora Antes e depois-->
+            <div class="Calculator">
+                <form>
+                    <div class="container">
+                        <label for="Before">Antes era</label>
+                        <div>
+                            <span>R$ </span><input type="number" name="Before" id="Before"> 
+                        </div>
+                    </div>
+    
+                    <div class="container">
+                        <label for="After">Depois ficou</label>
+                        <div><span>R$ </span><input type="number" name="After" id="After"></div>
+                    </div>
+                </form>
+                <button onclick="DifferenceBeforeAfter(Before.value, After.value)">Calcular</button>
+                <p id="ResultOfTotalThird"></p>
+            </div>
+         </div>
+>>>>>>> Stashed changes
     </main>
     <footer>
         <p>&copy; 2025 Vitor Zorzan Todos os direitos reservados.</p>
