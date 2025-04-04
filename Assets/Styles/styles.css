@@ -3,14 +3,6 @@
 
 /* Variables */
 :root {
-<<<<<<< Updated upstream
-    --PrimaryBackground: #213b64;
-    --SecondaryBackground: #41729f;
-    --TertiaryBackGround: #5885af;
-    --PrimaryText: #333333;
-    --LinkText: #c3e0e5;
-    --TitlesText: #111e33;
-=======
     --color-heading: #F9FAFB;
     --color-primary: #4F46E5;
     --color-secondary: #A5B4FC;
@@ -22,7 +14,6 @@
     --color-error: #EF4444;
     --color-warning: #F59E0B;
     --color-link: #4F46E5;
->>>>>>> Stashed changes
 }
 
 /* Reset & Base */
@@ -45,17 +36,10 @@ main {
 /* Header */
 header {
     font-size: 25px;
-<<<<<<< Updated upstream
-    color: var(--PrimaryText);
-    padding: 5px;
-    background: rgb(17,30,51);
-    background: linear-gradient(180deg, rgb(31, 55, 94) 0%, rgba(39,68,114,1) 100%);
-=======
     color: var(--color-text-primary);
     padding: 25px;
     margin-bottom: 20px;
     background: linear-gradient(180deg, rgb(31, 55, 94) 0%, rgba(39, 68, 114, 1) 100%);
->>>>>>> Stashed changes
 }
 
 header h1 {
@@ -69,12 +53,8 @@ header h1 a {
     padding: 15px;
     border-radius: 4px;
 }
-<<<<<<< Updated upstream
-header > nav {
-=======
 
 header nav {
->>>>>>> Stashed changes
     margin-bottom: 8px;
     font-size: 22px;
     font-weight: 600;
@@ -135,35 +115,19 @@ li {
 }
 
 .Calculator-Block {
-<<<<<<< Updated upstream
-    background-color: var(--PrimaryBackground);
-=======
     background-color: var(--color-secondary);
->>>>>>> Stashed changes
     padding-bottom: 5px;
     border-radius: 5px;
     text-align: center;
     color: black;
-<<<<<<< Updated upstream
-    box-shadow: 2px 2px 5px 0px #000000ab;
-=======
     box-shadow: 2px 2px 5px 0px black;
->>>>>>> Stashed changes
     transition: transform 0.2s, background-color 0.3s;
     height: 150px;
 }
 
 .Calculator-Block:hover {
     transform: scale(1.05);
-<<<<<<< Updated upstream
-    background-color: #1c3153;
-}
-#All-Calculators a {
-    text-decoration: none;
-    color: black;
-=======
     background-color: var(--color-tertiary);
->>>>>>> Stashed changes
 }
 
 .Calculator-Block img {
