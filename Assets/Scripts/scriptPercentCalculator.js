@@ -52,11 +52,11 @@ function DifferenceBeforeAfter(Before, After) {
     }
     else if (After > Before) {
         console.log('Increased')
-        resultID.innerHTML = `Aumentou: <span class="Highlight">${result}%</span>`
+        resultID.innerHTML = `Aumentou:  <span class="Highlight">${result}%</span>`
     }
     else if(Before > After) {
         console.log('Decreased')
-        resultID.innerHTML = `Diminuiu: <span class="Highlight">${result}%</span>`
+        resultID.innerHTML = `Diminuiu:  <span class="Highlight">${result}%</span>`
     }
     else if(Before == After) {
         console.log('The value is the same')
